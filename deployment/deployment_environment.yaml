@@ -1,18 +1,39 @@
 name: vint_deployment
 channels:
-- pytorch
-- conda-forge
+  - conda-forge
+  - defaults
 dependencies:
-- python=3.8.5
-- cudatoolkit=11.
-- torchvision
-- numpy
-- matplotlib
-- pyyaml
-- rospkg
-- pip:
-  - torch
-  - torchvision
-  - efficientnet_pytorch
-  - warmup_scheduler
-  - diffusers==0.11.1
+  - python=3.12
+  - numpy
+  - matplotlib
+  - pyyaml
+  - rospkg
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/nightly/cu128
+      - torch==2.9.0.dev20250725+cu128
+      - torchvision==0.24.0.dev20250725+cu128
+      - torchaudio==2.8.0.dev20250725+cu128
+      - efficientnet_pytorch==0.7.1
+      - warmup_scheduler
+      - diffusers==0.11.1
+
+
+# name: vint_deployment
+# channels:
+# - pytorch
+# - conda-forge
+# dependencies:
+# - python=3.8.5
+# - cudatoolkit=11.
+# - torchvision
+# - numpy
+# - matplotlib
+# - pyyaml
+# - rospkg
+# - pip:
+#   - torch
+#   - torchvision
+#   - efficientnet_pytorch
+#   - warmup_scheduler
+#   - diffusers==0.11.1
