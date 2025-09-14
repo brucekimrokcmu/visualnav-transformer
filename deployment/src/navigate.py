@@ -344,6 +344,10 @@ class ExplorationNode(Node):
             ]
             self.closest_node = min(start + min_dist_idx + 1, self.goal_node)
 
+        self.get_logger().info(f"Distances: {distances}")
+        self.get_logger().info(f"Chosen waypoint: {chosen_waypoint}")
+        self.get_logger().info(f"Closest node: {self.closest_node}")
+
         return chosen_waypoint
 
 
